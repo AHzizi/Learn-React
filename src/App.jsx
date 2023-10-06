@@ -8,6 +8,7 @@ import OtherPages from './Pages/OtherPages';
 
 function App() {
   const [count, setCount] = useState(0)
+  let a = 0;
   
   return (
    <div>
