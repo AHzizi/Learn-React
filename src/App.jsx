@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import './App.css'
 import Navbar from './components/Navbar'
 import Form from './components/Form'
@@ -8,7 +8,7 @@ import OtherPages from './Pages/OtherPages'
 import GamePages from './Pages/GamePages' // Corrected import name
 
 function App() {
-  const [count, setCount] = useState(0)
+
   
   return (
     <div>
