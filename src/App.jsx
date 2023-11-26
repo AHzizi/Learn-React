@@ -1,3 +1,4 @@
+
 import './App.css'
 import { BsFillMoonStarsFill  } from 'react-icons/bs';
 import {
@@ -8,8 +9,8 @@ import {
 
 
 function App() {
-  
-  return (
+
+return (
     <main className='bg-white px-10'>
       <section className=' min-h-screen'>
         <nav className='py-10 mb-10 flex justify-between'>
