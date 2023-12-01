@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { BsFillMoonStarsFill  } from 'react-icons/bs';
 import {
   AiFillTwitterCircle,
@@ -8,7 +6,6 @@ import {
 } from'react-icons/ai';
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import OtherPages from './OtherPages';
 
 
 const HomePages = () => {
@@ -97,7 +94,7 @@ const HomePages = () => {
         </div>
       </section>
     </main>
-    <Link to="/OtherPages" target="_blank" rel="noopener noreferrer">Go to Other Pages</Link>
+    <Link to="/other-pages" target="_blank" rel="noopener noreferrer">Go to Other Pages</Link>
   </div>
   )
 }

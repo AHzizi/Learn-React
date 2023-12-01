@@ -1,8 +1,6 @@
-import React from 'react'
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import HomePages from './HomePages';
 
 const OtherPages = () => {
   const[darkMode, setDarkMode] =useState(false)
@@ -10,6 +8,7 @@ const OtherPages = () => {
     setDarkMode(!darkMode)
     document.documentElement.classList.toggle('dark', !darkMode)
   }
+
   return (
     <main className='w-full dark:bg-slate-600'>
        <BsFillMoonStarsFill onClick={toggleDarkMode} className='mx-4 my-5 cursor-pointer text 2xl' />
@@ -26,7 +25,7 @@ const OtherPages = () => {
         </div>
         </div>
         <section className='grid grid-cols-4'>
-        <div class="bg-[url('https://source.unsplash.com/600x400')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
+        <div className="bg-[url('https://source.unsplash.com/600x400')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </section>
         </div>
         <Link to="/" target="_blank" rel="noopener noreferrer">Go to Home Pages</Link>
