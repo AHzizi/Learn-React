@@ -15,7 +15,7 @@ return (
     <BrowserRouter>
       <Routes>
         <Route path='/'  exact Component={HomePages} />
-        <Route path='/OtherPages' Component={OtherPages} />
+        <Route path='/other-pages' Component={OtherPages} />
       </Routes>
     </BrowserRouter>
   </div>
