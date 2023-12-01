@@ -10,6 +10,7 @@ const OtherPages = () => {
     setDarkMode(!darkMode)
     document.documentElement.classList.toggle('dark', !darkMode)
   }
+  
   return (
     <main className='w-full dark:bg-slate-600'>
        <BsFillMoonStarsFill onClick={toggleDarkMode} className='mx-4 my-5 cursor-pointer text 2xl' />
