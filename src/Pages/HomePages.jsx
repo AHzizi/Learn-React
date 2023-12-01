@@ -94,7 +94,7 @@ const HomePages = () => {
         </div>
       </section>
     </main>
-    <Link to="/other-pages" target="_blank" rel="noopener noreferrer">Go to Other Pages</Link>
+    <Link to="/other-pages" target="" rel="noopener noreferrer">Go to Other Pages</Link>
   </div>
   )
 }
