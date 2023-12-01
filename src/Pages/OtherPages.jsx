@@ -29,7 +29,7 @@ const OtherPages = () => {
         <div class="bg-[url('https://source.unsplash.com/600x400')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </section>
         </div>
-        <Link to="/HomePages" target="_blank" rel="noopener noreferrer">Go to Home Pages</Link>
+        <Link to="/" target="_blank" rel="noopener noreferrer">Go to Home Pages</Link>
     </main>
   )
 }
