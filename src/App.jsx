@@ -13,10 +13,12 @@ function App() {
 
 return (
   <div>
-    <Routes>
-      <Route path='/' Component={HomePages} />
-      <Route path='/OtherPages' Component={OtherPages} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' Component={HomePages} />
+        <Route path='/OtherPages' Component={OtherPages} />
+      </Routes>
+    </BrowserRouter>
   </div>
   )
 }
