@@ -4,33 +4,20 @@ import {
   AiFillLinkedin,
   AiFillFacebook
 } from'react-icons/ai';
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import Button from '../components/Button';
+import Navbar from '../components/Navbar'
 
 
 
 const HomePages = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true)
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark', !isDarkMode);
-  };
+ 
   return (
     <div className=''>
     <main className='bg-white px-10 dark:bg-gray-900'>
       <section className=' min-h-screen'>
-        <nav className='py-10 mb-10 flex justify-between'>
-          <h1 className='text-xl dark:text-white'>LOGO</h1>
-          <ul className='flex items-center'>
-            <li className='cursor-pointer text-xl'>
-              <a href="#">
-                <BsFillMoonStarsFill onClick={toggleDarkMode} />
-              </a>
-            </li>
-            <li className='bg-gradient-to-tr from-teal-600 to-cyan-500 text-white px-4 py-2 rounded-md ml-8'>Hi</li>
-          </ul>
-        </nav>
+        <Navbar />
         <div className='text-center p-10'>
           <h2 className='text-5xl py-2 text-teal-600 font-medium'>AHzizi</h2>
           <h3 className='text-2xl py-2 dark:text-white'>Exeler</h3>
