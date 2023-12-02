@@ -6,6 +6,8 @@ import {
 } from'react-icons/ai';
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Button from '../components/Button';
+
 
 
 const HomePages = () => {
@@ -94,7 +96,13 @@ const HomePages = () => {
         </div>
       </section>
     </main>
-    <Link to="/other-pages" target="" rel="noopener noreferrer">Go to Other Pages</Link>
+    <div className='h-96'>
+      
+      
+      <Link  to="/other-pages" target="" rel="noopener noreferrer"><Button name="Go To Other Page" /></Link>
+
+      <Link className='px-5  h-6 w-7 underline cursor-pointer' to="/another-page" target='' rel='noopener noreferer'>Go To Another Page</Link>
+    </div>
   </div>
   )
 }
