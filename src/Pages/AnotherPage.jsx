@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from "react";
-
+import Hero from '../components/Hero';
 
 const AnotherPage = () => {
 
