@@ -1,5 +1,6 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
+import { Link } from 'react-router-dom'
 const data = [{
   'no' : 1,
   'name' : 'John Doe',
@@ -47,7 +48,15 @@ const Hero = () => {
       <hr className='mb-1 text-sm' />
       <hr />
       <p className='mt-5 text-xl font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id hic non error facilis, aperiam quos quia illum temporibus ab laudantium, enim unde et optio est deleniti repellat dolor necessitatibus.</p>
-      <p className='mt-7 text-7xl font-extrabold'>WEB INI HANYA UNTUK LATIHAN</p>
+      <p className='mt-7 text-7xl font-extrabold'>WEB INI HANYA UNTUK <span className='bg-gradient-to-bl text-transparent from-teal-400 to-sky-400 bg-clip-text'>LATIHAN!!</span> </p>
+      </div>
+      <div className='px-7 mt-10 text-slate-700 absolute flex gap-4'>
+        <Link to='/home-pages'>
+          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Next Page</span>
+        </Link>
+        <Link to='/'>
+          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Prev Page</span>
+        </Link>
       </div>
     </section>
    </>
