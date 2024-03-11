@@ -11,3 +11,5 @@ const NewHome = () => {
 }
 
 export default NewHome
+
+const a = 0;
