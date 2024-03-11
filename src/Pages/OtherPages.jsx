@@ -33,4 +33,13 @@ const OtherPages = () => {
   )
 }
 
+const Coba = name => {
+  return (
+    `Hello ${name}`
+  )
+}
+
+let Name = Coba('John')
+console.log(Name)
+
 export default OtherPages
