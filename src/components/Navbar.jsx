@@ -10,7 +10,7 @@ const Navbar = () => {
     document.documentElement.classList.toggle('dark', !isDarkMode);
   };
   return (
-    <nav className='py-10 mb-10 flex justify-between'>
+    <nav className='py-10 mb-10 flex justify-between px-7'>
       <h1 className='text-xl dark:text-white'>LOGO</h1>
       <ul className='flex items-center'>
         <li className='cursor-pointer text-xl'>
