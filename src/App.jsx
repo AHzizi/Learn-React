@@ -5,6 +5,8 @@ import OtherPages from './Pages/OtherPages';
 import AnotherPage from "./Pages/AnotherPage";
 import ToDoPage from './Pages/ToDoPage';
 import NewHome from './Pages/NewHome';
+import { Helmet } from 'react-helmet';
+import MyImg from './assets/thumbnail.png';
 
 function App() {
   return (
@@ -18,6 +20,13 @@ function App() {
           <Route path='/todo-page' element={<ToDoPage />} />
         </Routes>
       </BrowserRouter>
+      <Helmet>
+        <meta property="og:title" content="WEB Latihan" />
+        <meta property="og:description" content="Web Untuk Latihan REACT JS" />
+        <meta property="og:image" content={`${process.env.PUBLIC_URL}/${MyImg}`} />
+        <meta property="og:url" content="https://react-pakai-niat.vercel.app" />
+        <meta property="og:type" content="website" />
+      </Helmet>
     </div>
   );
 }
