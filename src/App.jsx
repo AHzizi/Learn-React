@@ -21,12 +21,13 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Helmet>
-      <meta property="og:title" content="WEB Latihan" />
-      <meta property="og:description" content="Web Untuk Latihan REACT JS" />
-      <meta property="og:image" content="https://react-pakai-niat.vercel.app/assets/thumbnail.png" />
-      <meta property="og:url" content="https://react-pakai-niat.vercel.app" />
-      <meta property="og:type" content="website" />
+        <meta property="og:title" content="WEB Latihan" />
+        <meta property="og:description" content="Web Untuk Latihan REACT JS" />
+        <meta property="og:image" content="https://react-pakai-niat.vercel.app/assets/thumbnail.png" />
+        <meta property="og:url" content="https://react-pakai-niat.vercel.app" />
+        <meta property="og:type" content="website" />
       </Helmet>
+
     </div>
   );
 }
