@@ -23,7 +23,7 @@ function App() {
       <Helmet>
         <meta property="og:title" content="WEB Latihan" />
         <meta property="og:description" content="Web Untuk Latihan REACT JS" />
-        <meta property="og:image" content={`${process.env.PUBLIC_URL}/${MyImg}`} />
+        <meta property="og:image" content={`https://react-pakai-niat.vercel.app/${MyImg}`} />
         <meta property="og:url" content="https://react-pakai-niat.vercel.app" />
         <meta property="og:type" content="website" />
       </Helmet>
