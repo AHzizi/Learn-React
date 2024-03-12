@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-// vite.config.js
-export default {
+export default defineConfig({
+  plugins: [react()],
   build: {
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 500,
@@ -13,5 +13,4 @@ export default {
       }
     }
   }
-}
-
+})
