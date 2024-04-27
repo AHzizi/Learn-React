@@ -30,3 +30,5 @@ const ClockPages = () => {
 };
 
 export default ClockPages;
+
+const a = 'Hello World'
