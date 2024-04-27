@@ -57,6 +57,9 @@ const Hero = () => {
         <Link to='/'>
           <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Prev Page</span>
         </Link>
+        <Link to='/clock-page'>
+          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Clock Page</span>
+        </Link>
       </div>
     </section>
    </>

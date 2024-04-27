@@ -5,6 +5,7 @@ import OtherPages from './Pages/OtherPages';
 import AnotherPage from "./Pages/AnotherPage";
 import ToDoPage from './Pages/ToDoPage';
 import NewHome from './Pages/NewHome';
+import ClockPages from './Pages/ClockPages';
 import { Helmet } from 'react-helmet';
 import MyImg from './assets/thumbnail.png';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/other-pages' element={<OtherPages />} />
           <Route path='/another-page' element={<AnotherPage />} />
           <Route path='/todo-page' element={<ToDoPage />} />
+          <Route path='/clock-page' element={<ClockPages />} />
         </Routes>
       </BrowserRouter>
       <Helmet>
