@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        beachMalam: "url('/src/assets/beach-malam.png')",
+        beachSore: "url('/src/assets/beach-sore.png')",
+        beachSiang: "url('/src/assets/beach-siang.png')",
+      },
       fontFamily: "sans-serif",
     },
   },

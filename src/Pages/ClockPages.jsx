@@ -22,13 +22,27 @@ const ClockPages = () => {
 
   const formattedTime = `${hours}:${minutes}:${seconds} ${amOrPm}`;
 
+  // Function to determine the background class based on time
+  const getBackgroundClass = () => {
+    const hour = time.getHours();
+    if (hour >= 7 && hour < 15) {
+      return 'bg-beachSiang';
+    } else if (hour >= 15 && hour < 17) {
+      return 'bg-beachSore';
+    } else {
+      return 'bg-beachMalam';
+    }
+  };
+
   return (
-    <div className='p-10 text-9xl text-center w-full min-h-screen bg-slate-700'>
-      <h1 className=' mb-3 text-5xl mt-72 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text'>{formattedTime}</h1>
+    <div className={`p-10 text-9xl text-center w-full min-h-screen overflow-hidden ${getBackgroundClass()} bg-center bg-no-repeat bg-cover md:`}>
+      <div className='bg-slate-600 bg-opacity-20'>
+        <h1 className='mb-3 text-5xl mt-72 font-bold bg-gradient-to-br text-transparent from-teal-400 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text text-'>{formattedTime}</h1>
+      </div>
+      
+
     </div>
   );
 };
 
 export default ClockPages;
-
-const a = 'Hello World'
