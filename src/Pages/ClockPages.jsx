@@ -36,11 +36,10 @@ const ClockPages = () => {
 
   return (
     <div className={`p-10 text-9xl text-center w-full min-h-screen overflow-hidden ${getBackgroundClass()} bg-center bg-no-repeat bg-cover md:`}>
+
       <div className='bg-slate-600 bg-opacity-20'>
         <h1 className='mb-3 text-5xl mt-72 font-bold bg-gradient-to-br text-transparent from-teal-400 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text text-'>{formattedTime}</h1>
       </div>
-      
-
     </div>
   );
 };
