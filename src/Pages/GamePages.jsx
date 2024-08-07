@@ -74,6 +74,7 @@ const GamePages = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
       <h1 className="text-3xl font-bold mb-4">Snake Xenzia</h1>
+
       {gameOver ? (
         <div className="text-red-500 text-2xl">Game Over</div>
       ) : (
@@ -96,8 +97,13 @@ const GamePages = () => {
               />
             );
           })}
+          
         </div>
+        
       )}
+      {gameOver ? (
+        null
+      ) : <h2 className="font-sans text-xl text-slate-100 pt-4">Use Arrow for Control The Snake ⬆️ ⬇️ ⬅️ ➡️</h2>} 
     </div>
   );
 };
