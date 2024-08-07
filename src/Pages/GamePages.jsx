@@ -1,119 +1,105 @@
-// import React from 'react';
+import React, { useState, useEffect } from "react";
+import '../App.css';
+const GRID_SIZE = 20;
 
-// const Square = () => {
-//   return (
-//     <button className='w-9 h-9 border-4 border-gray-700'>
-//       X
-//     </button>
-//   );
-// };
+function getRandomCoordinates() {
+  const min = 1;
+  const max = GRID_SIZE - 1;
+  const x = Math.floor(Math.random() * (max - min + 1) + min);
+  const y = Math.floor(Math.random() * (max - min + 1) + min);
+  return [x, y];
+}
 
-// const GamePages = () => {
-//   return (
-//     <div>
-//       <h1 className='text-7xl text-transparent bg-clip-text bg-gradient-to-br from-teal-500 to-sky-500 font-bold mb-9'>
-//         Game Tic-Tac-Toe
-//       </h1>
-//       <div className='board grid grid-cols-3 gap-2 w-48 mx-auto'>
-//         <div className='board-row flex justify-center items-center'>
-//           <Square />
-//           <Square />
-//           <Square />
-//         </div>
-//         <div className='board-row flex justify-center items-center'>
-//           <Square />
-//           <Square />
-//           <Square />
-//         </div>
-//         <div className='board-row flex justify-center items-center'>
-//           <Square />
-//           <Square />
-//           <Square />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const GamePages = () => {
+  const [snake, setSnake] = useState([[10, 10]]);
+  const [food, setFood] = useState(getRandomCoordinates());
+  const [direction, setDirection] = useState([0, -1]);
+  const [gameOver, setGameOver] = useState(false);
 
-// export default GamePages;
+  const changeDirection = (e) => {
+    switch (e.key) {
+      case "ArrowUp":
+        setDirection([0, -1]);
+        break;
+      case "ArrowDown":
+        setDirection([0, 1]);
+        break;
+      case "ArrowLeft":
+        setDirection([-1, 0]);
+        break;
+      case "ArrowRight":
+        setDirection([1, 0]);
+        break;
+      default:
+        break;
+    }
+  };
 
-
-// src/TicTacToe.js
-import React, { useState } from "react";
-
-function TicTacToe() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
-
-  const handleClick = (i) => {
-    const squares = [...board];
-    if (calculateWinner(squares) || squares[i]) {
+  const moveSnake = () => {
+    const newSnake = [...snake];
+    const head = newSnake[0];
+    const newHead = [head[0] + direction[0], head[1] + direction[1]];
+    
+    if (
+      newHead[0] < 0 || newHead[1] < 0 || 
+      newHead[0] >= GRID_SIZE || newHead[1] >= GRID_SIZE ||
+      newSnake.some(segment => segment[0] === newHead[0] && segment[1] === newHead[1])
+    ) {
+      setGameOver(true);
       return;
     }
-    squares[i] = xIsNext ? "X" : "O";
-    setBoard(squares);
-    setXIsNext(!xIsNext);
+
+    newSnake.unshift(newHead);
+
+    if (newHead[0] === food[0] && newHead[1] === food[1]) {
+      setFood(getRandomCoordinates());
+    } else {
+      newSnake.pop();
+    }
+
+    setSnake(newSnake);
   };
 
-  const renderSquare = (i) => {
-    return (
-      <button className="square" onClick={() => handleClick(i)}>
-        {board[i]}
-      </button>
-    );
-  };
-
-  const winner = calculateWinner(board);
-  let status;
-  if (winner) {
-    status = "Winner: " + winner;
-  } else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
-  }
+  useEffect(() => {
+    if (!gameOver) {
+      const interval = setInterval(moveSnake, 200);
+      document.addEventListener("keydown", changeDirection);
+      return () => {
+        clearInterval(interval);
+        document.removeEventListener("keydown", changeDirection);
+      };
+    }
+  }, [snake, direction, gameOver]);
 
   return (
-    <div>
-      <div className="status">{status}</div>
-      <div className="board">
-        <div className="board-row">
-          {renderSquare(0)}
-          {renderSquare(1)}
-          {renderSquare(2)}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <h1 className="text-3xl font-bold mb-4">Snake Xenzia</h1>
+      {gameOver ? (
+        <div className="text-red-500 text-2xl">Game Over</div>
+      ) : (
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: `repeat(${GRID_SIZE}, 20px)`,
+            gridTemplateRows: `repeat(${GRID_SIZE}, 20px)`,
+          }}
+        >
+          {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, i) => {
+            const x = i % GRID_SIZE;
+            const y = Math.floor(i / GRID_SIZE);
+            const isSnake = snake.some(segment => segment[0] === x && segment[1] === y);
+            const isFood = food[0] === x && food[1] === y;
+            return (
+              <div
+                key={i}
+                className={`w-5 h-5 ${isSnake ? "bg-green-500" : ""} ${isFood ? "bg-red-500" : "bg-gray-800"}`}
+              />
+            );
+          })}
         </div>
-        <div className="board-row">
-          {renderSquare(3)}
-          {renderSquare(4)}
-          {renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {renderSquare(6)}
-          {renderSquare(7)}
-          {renderSquare(8)}
-        </div>
-      </div>
+      )}
     </div>
   );
-}
+};
 
-// Calculate the winner
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
-
-export default TicTacToe;
+export default GamePages;
