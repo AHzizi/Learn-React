@@ -1,6 +1,8 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
-import { Link } from 'react-router-dom'
+import '../App.css'
+import Button from './Button'
+
 const data = [{
   'no' : 1,
   'name' : 'John Doe',
@@ -23,7 +25,7 @@ const data = [{
 const Hero = () => {
   return (
    <>
-    <section className='bg-slate-800 w-full min-h-screen overflow-hidden'>
+    <section className='bg-nightCity bg-center bg-no-repeat bg-cover w-full min-h-screen overflow-hidden'>
       <div className='container px-7 py-5 text-white'>
         <h2 className='text-4xl font-semibold'>Halo, Nama Saya</h2>
         <h1 className='mb-3 text-5xl mt-4 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text'>`REN`</h1>
@@ -51,21 +53,24 @@ const Hero = () => {
       <p className='mt-7 text-7xl font-extrabold'>WEB INI HANYA UNTUK <span className='bg-gradient-to-bl text-transparent from-teal-400 to-sky-400 bg-clip-text'>LATIHAN!!</span> </p>
       </div>
       <div className='px-7 mt-10 text-slate-700 absolute flex gap-4'>
-        <Link to='/home-pages'>
-          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Next Page</span>
-        </Link>
-        <Link to='/'>
-          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Prev Page</span>
-        </Link>
-        <Link to='/clock-page'>
-          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Clock Page</span>
-        </Link>
-       
-        <Link to='/game-page'>
-          <span className='relative px-2 py-3 bg-zinc-300 rounded-lg'>Game Page</span>
-        </Link>
-
+      <Button 
+        text='Next Page'
+        to={'/home-pages'}
+      />
+      <Button 
+        text='Prev Page'
+        to={'/'}
+      />
+      <Button 
+        text='Clock Page'
+        to={'/clock-page'}
+      />
+      <Button 
+        text='Game Page'
+        to={'/game-page'}
+      />
       </div>
+      
     </section>
    </>
   )

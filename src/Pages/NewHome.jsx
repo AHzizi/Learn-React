@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import Hero from '../components/Hero'
+import Button from '../components/Button'
+import Snowfall from 'react-snowfall'
+
 const NewHome = () => {
   return (
     <div>
-      <Hero />
-     
+      <Snowfall />
+     <Hero />
     </div>
   )
 }
