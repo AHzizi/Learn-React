@@ -9,6 +9,7 @@ import ClockPages from './Pages/ClockPages';
 import GamePages from './Pages/GamePages';
 import { Helmet } from 'react-helmet';
 import MyImg from './assets/thumbnail.png';
+import LearnGrid from './Pages/LearnGrid';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/todo-page' element={<ToDoPage />} />
           <Route path='/clock-page' element={<ClockPages />} />
           <Route path='/game-page' element={<GamePages />} />
+          <Route path='/learn-grid' element={<LearnGrid />} />
         </Routes>
       </BrowserRouter>
       <Helmet>

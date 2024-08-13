@@ -69,6 +69,10 @@ const Hero = () => {
         text='Game Page'
         to={'/game-page'}
       />
+      <Button 
+        text='Grid'
+        to={'/learn-grid'}
+      />
       </div>
       
     </section>
