@@ -25,16 +25,15 @@ const data = [{
 const Hero = () => {
   return (
    <>
-    <section className='bg-nightCity bg-center bg-no-repeat bg-cover w-full bg-cover h-full overflow-hidden'>
+    <section className='bg-nightCity bg-center md:bg-center lg:bg-cover bg-cover w-full min-h-screen h-auto sm:h-screen overflow-hidden'>
       <div className='container px-7 py-5 text-white'>
         <h2 className='text-4xl font-semibold'>Halo, Nama Saya</h2>
         <h1 className='mb-3 text-5xl mt-4 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text'>`REN`</h1>
         <TypeAnimation
         className='text-xl font-semibold mb-2'
         sequence={[
-          // Same substring at the start will only be typed out once, initially
           'Pemalas',
-          1000, // wait 1s before replacing "Mice" with "Hamsters"
+          1000,
           'Player Kikir Impek',
           1000,
           'Mending Turu',
