@@ -7,6 +7,7 @@ import ToDoPage from './Pages/ToDoPage';
 import NewHome from './Pages/NewHome';
 import ClockPages from './Pages/ClockPages';
 import GamePages from './Pages/GamePages';
+import Services from './services/Services';
 import { Helmet } from 'react-helmet';
 import MyImg from './assets/thumbnail.png';
 import LearnGrid from './Pages/LearnGrid';
@@ -24,6 +25,8 @@ function App() {
           <Route path='/clock-page' element={<ClockPages />} />
           <Route path='/game-page' element={<GamePages />} />
           <Route path='/learn-grid' element={<LearnGrid />} />
+          <Route path='/services' element={<Services />} />
+          
         </Routes>
       </BrowserRouter>
       <Helmet>

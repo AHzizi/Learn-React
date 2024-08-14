@@ -25,7 +25,7 @@ const data = [{
 const Hero = () => {
   return (
    <>
-    <section className='bg-nightCity bg-center bg-no-repeat bg-cover w-full min-h-screen overflow-hidden'>
+    <section className='bg-nightCity bg-center bg-no-repeat bg-cover w-full bg-cover h-full overflow-hidden'>
       <div className='container px-7 py-5 text-white'>
         <h2 className='text-4xl font-semibold'>Halo, Nama Saya</h2>
         <h1 className='mb-3 text-5xl mt-4 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text'>`REN`</h1>
@@ -72,6 +72,10 @@ const Hero = () => {
       <Button 
         text='Grid'
         to={'/learn-grid'}
+      />
+      <Button
+        text='Fetch'
+        to={'/services'}
       />
       </div>
       
