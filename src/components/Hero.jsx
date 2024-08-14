@@ -27,8 +27,8 @@ const Hero = () => {
    <>
     <section className='bg-nightCity bg-center md:bg-center lg:bg-cover bg-cover w-full min-h-screen h-auto sm:h-screen overflow-hidden'>
       <div className='container px-7 py-5 text-white'>
-        <h2 className='text-4xl font-semibold'>Halo, Nama Saya</h2>
-        <h1 className='mb-3 text-5xl mt-4 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text'>`REN`</h1>
+        <h2 className='text-4xl font-semibold sm:text-2xl'>Halo, Nama Saya</h2>
+        <h1 className='mb-3 text-5xl mt-4 font-bold bg-gradient-to-br text-transparent from-teal-300 to-sky-500 bg-clip-text hover:bg-gradient-to-bl hover:from-yellow-400 hover:to-green-400 hover:text-transparents hover:bg-clip-text sm:text-3xl'>`REN`</h1>
         <TypeAnimation
         className='text-xl font-semibold mb-2'
         sequence={[
@@ -48,8 +48,8 @@ const Hero = () => {
     />
       <hr className='mb-1 text-sm' />
       <hr />
-      <p className='mt-5 text-xl font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id hic non error facilis, aperiam quos quia illum temporibus ab laudantium, enim unde et optio est deleniti repellat dolor necessitatibus.</p>
-      <p className='mt-7 text-7xl font-extrabold'>WEB INI HANYA UNTUK <span className='bg-gradient-to-bl text-transparent from-teal-400 to-sky-400 bg-clip-text'>LATIHAN!!</span> </p>
+      <p className='mt-5 text-xl font-semibold sm:mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, id hic non error facilis, aperiam quos quia illum temporibus ab laudantium, enim unde et optio est deleniti repellat dolor necessitatibus.</p>
+      <p className='mt-7 text-7xl font-extrabold sm:text-4xl'>WEB INI HANYA UNTUK <span className='bg-gradient-to-bl text-transparent from-teal-400 to-sky-400 bg-clip-text sm:text-3xl'>LATIHAN!!</span> </p>
       </div>
       <div className='px-7 mt-10 text-slate-700 absolute flex gap-4'>
       <Button 
